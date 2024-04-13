@@ -1,0 +1,34 @@
+:root {
+    /* color palette exported from https://coolors.co/31393c-2176ff-33a1fd-fdca40-f79824 */
+    --gunmetal: #31393cff;
+    --blue-crayola: #2176ffff;
+    --celestial-blue: #33a1fdff;
+    --sunglow: #fdca40ff;
+    --carrot-orange: #f79824ff;
+
+    /* override bootstrap defaults */
+    --bs-body-bg: var(--sunglow);
+    --bs-body-color: var(--gunmetal);
+    --bs-link-color: var(--sunglow);
+    --bs-body-font-family: 'Roboto', sans-serif;
+}
+
+/* this theme doesn't use css variables for these settings, so have to override them 'manually' */
+#sidebar-wrapper {
+    background: var(--gunmetal);
+}
+.portfolio-item .caption .caption-content {
+    color: var(--gunmetal);
+    /* change the alpha on the existing variable color */
+    /* see example 13 of https://drafts.csswg.org/css-color-5/#colormodify */
+    background: rgb(from var(--sunglow) r g b / 60%);
+}
+
+.menu-toggle,
+.menu-toggle:focus,
+.menu-toggle:hover,
+.sidebar-nav>.sidebar-brand a,
+.sidebar-nav>.sidebar-brand a:hover,
+.sidebar-nav li.sidebar-nav-item a {
+    color: var(--sunglow);
+}
