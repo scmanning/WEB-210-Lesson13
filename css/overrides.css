@@ -11,6 +11,7 @@
     --bs-body-color: var(--gunmetal);
     --bs-link-color: var(--sunglow);
     --bs-body-font-family: 'Roboto', sans-serif;
+    /* --bs-body-text-align: center; */
 }
 
 /* this theme doesn't use css variables for these settings, so have to override them 'manually' */
@@ -21,7 +22,10 @@
     color: var(--gunmetal);
     /* change the alpha on the existing variable color */
     /* see example 13 of https://drafts.csswg.org/css-color-5/#colormodify */
-    background: rgb(from var(--sunglow) r g b / 60%);
+    /* background: rgb(from var(--sunglow) r g b / 60%); */
+    /* let the caption take the full width of the parent */
+    flex-grow: 1;
+    text-align: center;
 }
 
 .menu-toggle,
@@ -31,4 +35,13 @@
 .sidebar-nav>.sidebar-brand a:hover,
 .sidebar-nav li.sidebar-nav-item a {
     color: var(--sunglow);
+}
+
+.view-full-image {
+    /* margin-left: 20; */
+    /* margin-right: auto; */
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
 }
