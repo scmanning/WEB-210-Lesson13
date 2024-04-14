@@ -6,18 +6,27 @@
     --sunglow: #fdca40ff;
     --carrot-orange: #f79824ff;
 
-    /* override bootstrap defaults */
+    /* override bootstrap defaults to match our portfolio styling */
     --bs-body-bg: var(--sunglow);
     --bs-body-color: var(--gunmetal);
     --bs-link-color: var(--sunglow);
     --bs-body-font-family: 'Roboto', sans-serif;
-    /* --bs-body-text-align: center; */
 }
 
-/* this theme doesn't use css variables for these settings, so have to override them 'manually' */
+/* override theme values in css classes as necessary */
+.btn-primary {
+    --bs-btn-color: var(--sunglow);
+    --bs-btn-bg: var(--celestial-blue);
+}
+
+.modal {
+    --bs-modal-bg: var(--sunglow);
+}
+
 #sidebar-wrapper {
     background: var(--gunmetal);
 }
+
 .portfolio-item .caption .caption-content {
     color: var(--gunmetal);
     /* change the alpha on the existing variable color */
@@ -37,19 +46,9 @@
     color: var(--sunglow);
 }
 
-.view-full-image {
-    /* margin-left: 20; */
-    /* margin-right: auto; */
-    text-align: center;
-    margin-right: auto;
-    margin-left: auto;
-    text-align: center;
-}
-
 /* make the carousel icons easier to see */
 .carousel-control-prev-icon,
-.carousel-control-next-icon
-{
+.carousel-control-next-icon {
     background-color: var(--gunmetal);
     width: 72px;
     height: 72px;
