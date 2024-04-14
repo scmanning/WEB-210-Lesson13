@@ -45,3 +45,12 @@
     margin-left: auto;
     text-align: center;
 }
+
+/* make the carousel icons easier to see */
+.carousel-control-prev-icon,
+.carousel-control-next-icon
+{
+    background-color: var(--gunmetal);
+    width: 72px;
+    height: 72px;
+}
